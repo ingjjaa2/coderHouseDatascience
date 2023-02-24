@@ -42,26 +42,34 @@ def predict_well_conditions(data:Validador):
 
 
 
-    if (bbpd_group[0]<1):
-        bbpd_group= 'low'
+    if (bbpd_group[0]<1):        
         bbpd_value = model_rbbpd_low.predict(predict2)
-    elif (bbpd_group[0]<2):
-        bbpd_group= 'mid'
+    elif (bbpd_group[0]<2):        
         bbpd_value = export_model_rbbpd_mid.predict(predict2)
-    else:
-        bbpd_group= 'high'
+    else:        
         bbpd_value = model_rbbpd_high.predict(predict2)
 
     
-    if (ays_group[0]<1):
-        ays_group= 'low'
+    if (ays_group[0]<1):        
         ays_value = export_model_rays_low.predict(predict2)
-    elif (ays_group[0]<2):
-        ays_group= 'mid'
+    elif (ays_group[0]<2):        
         ays_value = export_model_rays_mid.predict(predict2)
+    else:        
+        ays_value = export_model_rays_high.predict(predict2)
+
+    if (bbpd_value[0]<100):
+        bbpd_group= 'low'
+    elif (bbpd_value[0]<200):
+        bbpd_group= 'mid'
+    else:
+        bbpd_group= 'high'
+
+    if (ays_value[0]<20):
+        ays_group= 'low'
+    elif (ays_value[0]<40):
+        ays_group= 'mid'
     else:
         ays_group= 'high'
-        ays_value = export_model_rays_high.predict(predict2)
 
 
 
