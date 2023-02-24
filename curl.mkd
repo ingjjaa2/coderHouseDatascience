@@ -1,0 +1,9 @@
+curl --request POST \
+  --url http://127.0.0.1:8000/predict \
+  --header 'Content-Type: application/json' \
+  --data '{
+	"XCOORD":69,
+	"YCOORD":85,
+	"Prof":7179,
+	"Dpiston":1.5
+}'
