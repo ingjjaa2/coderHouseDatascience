@@ -1,4 +1,3 @@
-from typing import Union
 from fastapi import FastAPI
 from validator import Validador
 from prediction import predict_well_conditions
