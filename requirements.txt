@@ -1,3 +1,4 @@
-fastapi
-unicorn
+fastapi==0.85.0
+unicorn==0.18.3
+gunicarn==20.1.0
 pandas
