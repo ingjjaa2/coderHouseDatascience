@@ -1,9 +1,9 @@
 curl --request POST \
-  --url http://127.0.0.1:8000/predict \
+  --url https://coder-house-final.onrender.com/predict \
   --header 'Content-Type: application/json' \
   --data '{
-	"XCOORD":69,
-	"YCOORD":85,
+	"XCOORD":79,
+	"YCOORD":175,
 	"Prof":7179,
 	"Dpiston":1.5
 }'
